@@ -31,6 +31,7 @@ gem "mysql2"
 # end
 gem 'devise'
 gem 'jquery-rails'
+gem "nested_form"
 
 group :development, :test do
   gem "rspec-rails"

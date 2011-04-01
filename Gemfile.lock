@@ -50,6 +50,7 @@ GEM
     mime-types (1.16)
     mysql2 (0.2.7)
       rack (>= 1.0.0)
+    nested_form (0.1.0)
     orm_adapter (0.0.4)
     polyglot (0.3.1)
     rack (1.2.2)
@@ -97,5 +98,6 @@ DEPENDENCIES
   devise
   jquery-rails
   mysql2
+  nested_form
   rails (= 3.0.5)
   rspec-rails
