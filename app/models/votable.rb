@@ -10,7 +10,7 @@ class Votable < ActiveRecord::Base
     5
   end
 
-  def is_owner?(u)
-    user == u
+  def is_owner?(user)
+    self.user == user
   end
 end
