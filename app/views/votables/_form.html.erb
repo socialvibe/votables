@@ -19,6 +19,9 @@
     <%= f.label :votes_per_round %><br />
     <%= f.text_field :votes_per_round %>
   </div>
+
+  <p><%= link_to_add_fields "Add Option", f, :options %></p>
+
   <div class="actions">
     <%= f.submit %>
   </div>

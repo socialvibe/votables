@@ -3,7 +3,7 @@ class CreateOptions < ActiveRecord::Migration
     create_table :options do |t|
       t.integer :votable_id
       t.string :name
-      t.string :description
+      t.string :description, :limit => 2000
 
       t.timestamps
     end
