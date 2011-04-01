@@ -1,0 +1,31 @@
+<h1>Listing rounds</h1>
+
+<table>
+  <tr>
+    <th>Votable</th>
+    <th>Starts at</th>
+    <th>Ends at</th>
+    <th>Number</th>
+    <th>Allowed winners</th>
+    <th></th>
+    <th></th>
+    <th></th>
+  </tr>
+
+<% @rounds.each do |round| %>
+  <tr>
+    <td><%= round.votable_id %></td>
+    <td><%= round.starts_at %></td>
+    <td><%= round.ends_at %></td>
+    <td><%= round.number %></td>
+    <td><%= round.allowed_winners %></td>
+    <td><%= link_to 'Show', round %></td>
+    <td><%= link_to 'Edit', edit_round_path(round) %></td>
+    <td><%= link_to 'Destroy', round, :confirm => 'Are you sure?', :method => :delete %></td>
+  </tr>
+<% end %>
+</table>
+
+<br />
+
+<%= link_to 'New Round', new_round_path %>
