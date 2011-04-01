@@ -4,4 +4,8 @@ class Votable < ActiveRecord::Base
 
   accepts_nested_attributes_for :rounds, :allow_destroy => true
   accepts_nested_attributes_for :options, :allow_destroy => true
+
+  def num_voters
+    5
+  end
 end
