@@ -30,3 +30,8 @@ gem "mysql2"
 #   gem 'webrat'
 # end
 gem 'devise'
+gem 'jquery-rails'
+
+group :development, :test do
+  gem "rspec-rails"
+end

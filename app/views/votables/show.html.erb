@@ -1,0 +1,15 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <b>Name:</b>
+  <%= @votable.name %>
+</p>
+
+<p>
+  <b>Votes per round:</b>
+  <%= @votable.votes_per_round %>
+</p>
+
+
+<%= link_to 'Edit', edit_votable_path(@votable) %> |
+<%= link_to 'Back', votables_path %>

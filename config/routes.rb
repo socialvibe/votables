@@ -1,4 +1,12 @@
 Votables::Application.routes.draw do
+  resources :votes
+
+  resources :options
+
+  resources :rounds
+
+  resources :votables
+
   devise_for :users
 
   resources :home, :only => :index
