@@ -1,0 +1,30 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <b>Votable:</b>
+  <%= @round.votable_id %>
+</p>
+
+<p>
+  <b>Starts at:</b>
+  <%= @round.starts_at %>
+</p>
+
+<p>
+  <b>Ends at:</b>
+  <%= @round.ends_at %>
+</p>
+
+<p>
+  <b>Number:</b>
+  <%= @round.number %>
+</p>
+
+<p>
+  <b>Allowed winners:</b>
+  <%= @round.allowed_winners %>
+</p>
+
+
+<%= link_to 'Edit', edit_round_path(@round) %> |
+<%= link_to 'Back', rounds_path %>

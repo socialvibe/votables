@@ -30,3 +30,10 @@ gem "mysql2"
 #   gem 'webrat'
 # end
 gem 'devise'
+gem 'jquery-rails'
+gem "nested_form"
+
+group :development, :test do
+  gem "rspec-rails"
+  gem "nifty-generators"
+end

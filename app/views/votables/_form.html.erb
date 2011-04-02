@@ -1,0 +1,33 @@
+<%= nested_form_for(@votable) do |f| %>
+  <% if @votable.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(@votable.errors.count, "error") %> prohibited this votable from being saved:</h2>
+
+      <ul>
+      <% @votable.errors.full_messages.each do |msg| %>
+        <li><%= msg %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= f.label :name %><br />
+    <%= f.text_field :name %>
+  </div>
+  <div class="field">
+    <%= f.label :votes_per_round %><br />
+    <%= f.text_field :votes_per_round %>
+  </div>
+
+  <%= f.fields_for :options %>
+  <p><%= f.link_to_add "Add an option", :options %></p>
+  
+
+  <%= f.fields_for :rounds %>
+  <p><%= f.link_to_add "Add a round", :rounds %></p>
+
+  <div class="actions">
+    <%= f.submit %>
+  </div>
+<% end %>
