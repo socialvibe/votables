@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="utf-8"?>
+<s:Group xmlns:fx="http://ns.adobe.com/mxml/2009" 
+		 xmlns:s="library://ns.adobe.com/flex/spark" 
+		 xmlns:mx="library://ns.adobe.com/flex/mx" width="100%" height="300" xmlns:view="view.*" initialize="onInit()">
+	<s:layout>
+		<s:VerticalLayout/>
+	</s:layout>
+	<fx:Script>
+		<![CDATA[
+			import control.TimeController;
+			
+			private var _timeControl:TimeController;
+			
+			private function onInit():void
+			{
+				_timeControl = new TimeController (_timer);
+				
+			}
+		]]>
+	</fx:Script>
+	<fx:Declarations>
+		<!-- Place non-visual elements (e.g., services, value objects) here -->
+	</fx:Declarations>
+	<view:CountdownTimer id="_timer">
+	</view:CountdownTimer>
+	<s:HGroup width="100%">
+		<s:Label text="ROUND 1 of 3" textAlign="center" width="100%" fontSize="24"/>
+		<s:Label text="3/10 Users Has Voted" width="100%" verticalAlign="middle" textAlign="center" fontSize="24"/>
+	</s:HGroup>
+	<s:Label text="TITLE" width="100%" verticalAlign="middle" textAlign="center" fontWeight="bold" fontSize="60"/>
+</s:Group>
