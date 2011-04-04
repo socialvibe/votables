@@ -78,3 +78,19 @@ a {
 	float: right;
 	font-size: 12px;
 }
+
+#votable-creation-container {
+  border: 1px solid black;
+  padding: 5px;
+  width: 540px;
+
+  color: #666;
+  display: block;
+  font-size: 13px;
+  font-weight: bold;
+  line-height: 20px;
+  text-align: left;
+}
+#votable-creation-container input {
+}
+

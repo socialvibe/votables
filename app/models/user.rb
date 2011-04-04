@@ -1,5 +1,6 @@
 class User < ActiveRecord::Base
   has_many :votables
+  has_many :votable_permissions
 
   # Include default devise modules. Others available are:
   # :token_authenticatable, :encryptable, :confirmable, :lockable, :timeoutable and :omniauthable

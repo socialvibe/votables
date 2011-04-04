@@ -1,9 +1,16 @@
 <p>
-  <%= f.label :allowed_winners %><br />
-  <%= f.text_field :allowed_winners %><br />
-  <%= f.label :number %><br />
-  <%= f.text_field :number %><br />
-  <%= f.link_to_remove "Remove this round" %>
+Round <%= %><br />
+  <%= f.label :starts_at %>
+  <%= f.datetime_select :starts_at %><br />
+  <%= f.label :ends_at %>
+  <%= f.datetime_select :ends_at %><br />
+  <%= f.label :allowed_winners %>
+  <%= f.text_field :allowed_winners, :size => 1 %>
+  <%= f.label :number %>
+  <%= f.text_field :number %>
+  <%= f.link_to_remove "Remove" %>
+  <br />
+  ----
 </p>
 
 

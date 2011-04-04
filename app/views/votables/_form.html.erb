@@ -11,21 +11,36 @@
     </div>
   <% end %>
 
-  <div class="field">
-    <%= f.label :name %><br />
-    <%= f.text_field :name %>
-  </div>
-  <div class="field">
-    <%= f.label :votes_per_round %><br />
-    <%= f.text_field :votes_per_round %>
-  </div>
+  <div id="votable-creation-container">
+    <div class="field">
+      <%= f.label :name, "Name:" %>
+      <%= f.text_field :name %>
+    </div>
+    <div class="field">
+      <%= f.label :votes_per_round, "Votes per round:" %>
+      <%= f.text_field :votes_per_round, :size => 1, :value => 1 %>
+    </div>
+    <br /><br />
 
-  <%= f.fields_for :options %>
-  <p><%= f.link_to_add "Add an option", :options %></p>
-  
+    <fieldset class="bordered" id="options">
+      <legend>Options</legend>
 
-  <%= f.fields_for :rounds %>
-  <p><%= f.link_to_add "Add a round", :rounds %></p>
+      <%= f.fields_for :options %>
+      <p><%= f.link_to_add "Add an option", :options %></p>
+    </fieldset>
+
+    <fieldset class="bordered" id="options">
+      <legend>Rounds (Need at least 1!)</legend>
+      <%= f.fields_for :rounds %>
+      <p><%= f.link_to_add "Add a round", :rounds %></p>
+    </fieldset>
+
+    <fieldset class="bordered" id="votable_permissions">
+      <legend>Invite friends to Vote!</legend>
+      <%= f.fields_for :votable_permissions %>
+      <p><%= f.link_to_add "Invite a user", :votable_permissions %></p>
+    </fieldset>
+  </div>
 
   <div class="actions">
     <%= f.submit %>

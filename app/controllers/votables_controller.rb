@@ -26,6 +26,7 @@ class VotablesController < ApplicationController
   # GET /votables/new.xml
   def new
     @votable = Votable.new
+    @votable.rounds.build(:number => 1)
 
     respond_to do |format|
       format.html # new.html.erb
