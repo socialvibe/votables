@@ -1,4 +1,4 @@
-package control
+package com.control
 {
 	import flash.events.EventDispatcher;
 

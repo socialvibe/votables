@@ -1,4 +1,4 @@
-package control
+package com.control
 {
 	import flash.events.Event;
 	import flash.events.EventDispatcher;
@@ -8,7 +8,7 @@ package control
 	
 	import spark.components.Group;
 	
-	import view.CountdownTimer;
+	import com.view.CountdownTimer;
 	
 	public class TimeController extends EventDispatcher
 	{
