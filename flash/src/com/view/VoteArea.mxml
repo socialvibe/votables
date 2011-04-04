@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+<mx:List xmlns:fx="http://ns.adobe.com/mxml/2009" 
+		 xmlns:s="library://ns.adobe.com/flex/spark" 
+		 xmlns:mx="library://ns.adobe.com/flex/mx"
+		 itemRenderer="com.view.component.Votable" initialize="onInit()"
+ 		 verticalScrollPolicy="on" dropShadowVisible="false" height="100%">
+	<fx:Declarations>
+		<!-- Place non-visual elements (e.g., services, value objects) here -->
+	</fx:Declarations>
+	<fx:Script>
+		<![CDATA[
+			import com.model.DataModel;
+			
+			private var _model:DataModel;
+			
+			private function onInit():void
+			{
+				_model = DataModel.instance;
+				this.dataProvider = _model.vote_options;
+			}
+		]]>
+	</fx:Script>
+</mx:List>
